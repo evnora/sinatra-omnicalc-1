@@ -1,0 +1,17 @@
+<h1>Monthly Payment Calculation</h1>
+
+<p>
+  Principal: <%= user_pv.to_fs(:currency) %>
+</p>
+
+<p>
+  Monthly Interest Rate: <%= monthly_rate.to_fs(:percentage, { :precision => 4 }) %>
+</p>
+
+<p>
+  Total Number of Payments: <%= num_payments %>
+</p>
+
+<p>
+  Your monthly payment is: <%= monthly_payment.to_fs(:currency) %>
+</p>
