@@ -41,9 +41,9 @@ get("/random/results") do
   user_min = params.fetch("user_min").to_i
   user_max = params.fetch("user_max").to_i
 
-  random_result = rand(user_min..user_max)
+  @random_result = rand(user_min..user_max)
 
-  erb(:random_results, { :locals => { :random_result => random_result } })
+  erb(:random_results)
 end
 
 get("/payment/new") do
